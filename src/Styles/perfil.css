@@ -1,0 +1,16 @@
+.perfil-main{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.perfil-container{
+    position: relative;
+    width: 50%;
+    height: 90%;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    overflow: hidden;
+}

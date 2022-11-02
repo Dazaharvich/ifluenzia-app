@@ -1,0 +1,25 @@
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Img/hero.jpg);
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
+}
+
+.titulo{
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.sub-titulo{
+    color: rgb(186, 240, 240);
+    font-size: 2rem;
+}
+.line{
+    width: 80%;
+    /* margin-bottom: 4rem; */
+}

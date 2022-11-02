@@ -1,0 +1,47 @@
+.navbar {
+    background-color: #ffffff;
+    position: sticky; 
+    top: 0;
+    align-items: center;
+    display:flex;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.links{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    gap: 60px;
+}
+
+.logo-container{
+    /* display:flex;
+    justify-content: start; */
+    margin-left: 2rem;
+}
+
+.total{
+    color: rgb(145, 153, 226);
+}
+
+.logo-carrito{
+    font-size: 1.5rem;
+}
+
+.link-carrito{
+    text-decoration: none;
+}
+
+.link-menu{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(145, 153, 226);
+}
+
+.logo-img{
+    height: 60px;
+}

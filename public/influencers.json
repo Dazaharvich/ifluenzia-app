@@ -1,0 +1,51 @@
+[
+    {
+      "desc": "Hola, soy Tony-z influencer dedicado 100 por ciento al fitnes y a cambiar la vida de las personas. Creo videos motivacionales y de mis entrenamientos, perfecto para marcas deportivas, gimnasios o suplementos deportivos.",
+      "id": "I001",
+      "img": "https://i.imgur.com/7bjnqfd.jpg",
+      "servicios": ["Rutinas", "reels", "Menciones", "Youtube"],
+      "name": "Tony-Z",
+      "price": 25000
+    },
+    {
+      "desc": "Aquí Gino Carone, experto en moda y estilo de vida masculino. Modelo desde los 17 años con una multitud de seguidores. Soy una marca exclusiva y vivo según las últimas tendencias.",
+      "id": "I002",
+      "img": "https://i.imgur.com/UXoFsXX.jpg",
+      "servicios": ["reels", "Tik-Tok", "Modelaje", "Asesoria"],
+      "name": "Gino Carone",
+      "price": 95000
+    },
+    {
+      "desc": "Hola mi nombre es John Juanes, experto en tecnología. Soy un adicto a los gadgets y en mi canal de Youtube me decico al unboxing y análisis de lo último en el mundo del Tech. Trabajo con marcas del rubro y tiendas especializadas de Smartphones.",
+      "id": "I003",
+      "img": "https://i.imgur.com/zoklCw4.jpg",
+      "servicios": ["YouTube", "Tik-Tok", "Branding", "reels"],
+      "name": "John Juanes",
+      "price": 45500
+    },
+    {
+      "desc": "Hola! soy Kitty Lu, influencer experta en maquillaje. Desde pequeña me apasiona el arte del maquillaje y la representación, ahora llevo el maquillaje como mi estilo de vida. Trabajo con multitud de marcas y canales de capacitación. Además tengo mi canal donde enseño mis mejores técnicas para crear arte con tu rostro.",
+      "id": "I004",
+      "img": "https://i.imgur.com/r0nzSBe.jpg",
+      "servicios": ["Maquilladora", "YouTube", "Tik-Tok", "Instagram"],
+      "name": "Kitty Lu",
+      "price": 65900
+    },
+    {
+      "desc": "Soy Maria Paparala, reconocida modelo italiana. Después de caminar por las mas importantes pasarelas del mundo, dediqué todo mi trabajo a las redes sociales y la influencia de la moda en la gente. Ahora trabajo con las marcas top de la industria de la moda y enseño a miles de mujeres a sacar partido de su belleza.",
+      "id": "I005",
+      "img": "https://i.imgur.com/BFnmqoC.jpg",
+      "servicios": ["Modelo", "Instagram", "Tik-Tok", "Fashion"],
+      "name": "Maria Paparala",
+      "price": 115900
+    },
+    {
+      "desc": "Hola a todos soy Vanilla, viajera de corazón y enamorada del mundo. Desde la primera vez que me subí aun avión entendí que jamás dejaría de viajar. Me dedico a descubrir culturas nuevas alrededor del globo, costumbres, festivales y experiencias únicas que comparto con mi comunidad a través de mis redes sociales. Trabajo con agencias de viaje, hoteles y restaurantes muy conocidos.",
+      "id": "I006",
+      "img": "https://i.imgur.com/Vq9yOWC.jpg",
+      "servicios": ["Viajera", "YouTube", "Tik-Tok", "Instagram"],
+      "name": "Vanilla",
+      "price": 55900
+    }
+  ]
+  
