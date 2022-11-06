@@ -1,5 +1,6 @@
 import React from 'react';
-import '../Styles/inicioSesion.css';
+import { Link } from "react-router-dom";
+import '../Styles/registro.css';
 import Navbar from '../Components/Navbar';
 
 
@@ -19,7 +20,7 @@ export default function InicioSesion() {
         <input className='input' type="password" placeholder="Min 6 caracteres de largo" />
         <button className='login-button' type="submit">Registrame</button>
       </div>
-    {/*   <a href="https://twitter.com/prathkum">MADE BY PRATHAM</a> */}
+      <Link to="/registro" className="link-menu">No tienes cuenta? Registrate aquí</Link>
     </div>
     </div>
   </>

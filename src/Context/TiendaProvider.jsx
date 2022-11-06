@@ -33,6 +33,7 @@ const TiendaProvider = ({ children }) => {
     }
   };
 
+  //funciones de carrito
   const incrementar = (i) => {
     carrito[i].count++;
     setCarrito([...carrito]);

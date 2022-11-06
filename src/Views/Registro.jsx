@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import '../Styles/registro.css';
 import Navbar from '../Components/Navbar';
 
@@ -21,7 +22,7 @@ export default function Registro() {
         <input className='input' type="password" placeholder="Min 6 caracteres de largo" />
         <button className='login-button' type="submit">Registrame</button>
       </div>
-    {/*   <a href="https://twitter.com/prathkum">MADE BY PRATHAM</a> */}
+      <Link to="/login" className="link-menu">Ya tienes una cuenta? Inicia sesión aquí</Link>
     </div>
     </div>
     </>
