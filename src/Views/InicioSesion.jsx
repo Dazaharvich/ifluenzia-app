@@ -4,6 +4,7 @@ import '../Styles/registro.css';
 import Navbar from '../Components/Navbar';
 
 
+
 export default function InicioSesion() {
   return (
     <>
@@ -14,10 +15,10 @@ export default function InicioSesion() {
       <div className="form-title">Bienvenido de vuelta!</div>
       <p>Ingresa tus datos</p>
       <div className="inputs">
-        <label className='label'>Correo</label>
-        <input className='input' type="email" placeholder="juanito123@test.com" />
-        <label className='label'>Contraseña</label>
-        <input className='input' type="password" placeholder="Min 6 caracteres de largo" />
+        <label for='email' className='label'>Correo</label>
+        <input className='input' type="email" name='email' placeholder="juanito123@test.com" />
+        <label for='password' className='label'>Contraseña</label>
+        <input className='input' type="password" name='password' placeholder="Min 6 caracteres de largo" />
         <button className='login-button' type="submit">Registrame</button>
       </div>
       <Link to="/registro" className="link-menu">No tienes cuenta? Registrate aquí</Link>

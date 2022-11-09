@@ -48,14 +48,12 @@ const TiendaProvider = ({ children }) => {
     }
     setCarrito([...carrito]);
   };
-
-
-  
-
   console.log(carrito);
+
+
   return (
     <TiendaContext.Provider
-      value={{ servicios, carrito, setCarrito, addToCart, incrementar, decrementar }}
+      value={{ servicios, setServicios, carrito, setCarrito, addToCart, incrementar, decrementar }}
     >
       {children}
     </TiendaContext.Provider>
