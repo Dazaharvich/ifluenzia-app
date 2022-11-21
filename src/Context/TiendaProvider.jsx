@@ -1,25 +1,51 @@
 import { createContext, useState, useEffect } from "react";
+import { Navigate } from "react-router-dom";
 
 // Creación del context
 const TiendaContext = createContext();
 
-// Provider con la fuente de datos para proveer
+
+// Provider
 const TiendaProvider = ({ children }) => {
   const [servicios, setServicios] = useState([]);
   const [carrito, setCarrito] = useState([]);
+  const [busqueda, setBusqueda] = useState("");
+  const [isAuth, setIsAuth] = useState(false);
+  const [users, setUsers] = useState([]);
+  const [loggedUser, setLoggedUser] = useState([]);
 
-  // Obtener los servicios de la Api
+
+// Obtener los servicios de la Api
   const getServicios = async () => {
     const res = await fetch("/influencers.json");
     const servicios = await res.json();
     setServicios(servicios);
   };
-  //Cargar lista
+
+// Obtener usuarios del json
+  const getUsuarios = async () =>{
+    const res = await fetch("/usuarios.json");
+    let usuarios = await res.json();
+    setUsers(usuarios);
+  };
+
+
+//Cargar lista
   useEffect(() => {
     getServicios();
+    getUsuarios();
   }, []);
 
-  // Funciones para el carro
+
+
+
+// Rutas Privadas
+  const PrivateRoute =({auth: { isAuth }, children}) =>{
+    return isAuth ? children : <Navigate to="/" />
+  };
+
+
+// Funciones para el carro
   const addToCart = ({ id, price, name, img }) => {
     const productoEcontradoIndex = carrito.findIndex((p) => p.id === id);
     const producto = { id, price, name, img, count: 1 };
@@ -33,12 +59,15 @@ const TiendaProvider = ({ children }) => {
     }
   };
 
-  //funciones de carrito
+
+  //funcion de carrito incrementar
   const incrementar = (i) => {
     carrito[i].count++;
     setCarrito([...carrito]);
   };
 
+
+  //funcion de carrito decrementar
   const decrementar = (i) => {
     const { count } = carrito[i];
     if (count === 1) {
@@ -47,13 +76,34 @@ const TiendaProvider = ({ children }) => {
       carrito[i].count--;
     }
     setCarrito([...carrito]);
+    console.log(carrito);
   };
-  console.log(carrito);
 
+/*   Funcion Autenticacion Firebase
+  const signup = (name, email, password) => {
+    createUserWithEmailAndPassword(auth, name, email, password);
+  }; */
 
   return (
     <TiendaContext.Provider
-      value={{ servicios, setServicios, carrito, setCarrito, addToCart, incrementar, decrementar }}
+      value={{
+        servicios,
+        setServicios,
+        carrito,
+        setCarrito,
+        addToCart,
+        incrementar,
+        decrementar,
+        busqueda,
+        setBusqueda,
+        PrivateRoute,
+        users,
+        setUsers,
+        isAuth,
+        setIsAuth,
+        loggedUser,
+        setLoggedUser
+      }}
     >
       {children}
     </TiendaContext.Provider>

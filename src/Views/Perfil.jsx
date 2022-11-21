@@ -1,5 +1,6 @@
 import React from 'react';
 import PrivateNavbar from '../Components/PrivateNavbar';
+//import TiendaContext from '../Context/TiendaProvider';
 import '../Styles/perfil.css';
 
 

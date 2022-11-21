@@ -22,7 +22,7 @@ export default function Detalle() {
     getDatos();
   },[servicios]);
 
-  //render del detalle de cada pizza en "Ver Mas"
+  //render del detalle de cada servicio desde btn "Ver Mas"
 
   return (
     <>

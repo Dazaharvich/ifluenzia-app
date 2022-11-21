@@ -1,0 +1,27 @@
+[
+    {
+      "userId": 1,
+      "nombre": "Juan Montes",
+      "correo": "jmontes@gmail.com",
+      "contraseña": 123456,
+      "login": false,
+      "favorito": []
+    },
+    {
+      "userId": 2,
+      "nombre": "Valentina Gonzalez",
+      "correo": "vgonzalez@gmail.com",
+      "contraseña": 1234567,
+      "login": false,
+      "favorito": []
+    },
+    {
+        "userId": 3,
+        "nombre": "Adrian Lopez",
+        "correo": "alopez@gmail.com",
+        "contraseña": 12345678,
+        "login": false,
+        "favorito": []
+      }
+
+  ]

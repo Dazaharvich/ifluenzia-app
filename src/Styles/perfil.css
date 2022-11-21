@@ -14,3 +14,15 @@
     background: #ecf0f3;
     overflow: hidden;
 }
+
+.input-desc{
+    caret-color: #de48b5;
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    height: 100px;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}

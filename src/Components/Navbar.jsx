@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { formatNumber } from '../formatNumber';
+//import { formatNumber } from '../formatNumber';
 import Logo from '../assets/Img/Logo.PNG';
 import '../Styles/navbar.css';
 

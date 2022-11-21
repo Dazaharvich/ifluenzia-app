@@ -1,29 +1,75 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import '../Styles/registro.css';
+import React, { useContext }from 'react';
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from '../Components/Navbar';
-
+import TiendaContext from '../Context/TiendaProvider';
+import '../Styles/registro.css';
+import swal from 'sweetalert';
 
 
 export default function InicioSesion() {
+
+  const {users, setIsAuth, setLoggedUser} = useContext(TiendaContext);
+  const navigate = useNavigate();
+
+//Capturar datos de inicio sesion
+const logIn = () =>{
+  //e.preventDefault();
+  let correo = document.getElementById("email").value;
+  let password = document.getElementById("password").value; 
+
+  if (correo === "" && password === ""){
+    swal("Complete ambos parametros por favor", "warning");
+  }else{
+    const newLogIn = users.find(e => e.email === correo);
+    if (newLogIn !== undefined){
+      if (newLogIn.password === password){
+        setIsAuth(true);
+        setLoggedUser(newLogIn);
+        console.log(newLogIn);
+        navigate("/tienda");
+      }
+    } else {
+      swal("Correo o contraseña invalidos", "warning");
+    }
+  }
+};
+
   return (
     <>
-    <Navbar />
-    <div className='main'> 
-    <div className="container">
-      <div className="form-avatar"></div>
-      <div className="form-title">Bienvenido de vuelta!</div>
-      <p>Ingresa tus datos</p>
-      <div className="inputs">
-        <label for='email' className='label'>Correo</label>
-        <input className='input' type="email" name='email' placeholder="juanito123@test.com" />
-        <label for='password' className='label'>Contraseña</label>
-        <input className='input' type="password" name='password' placeholder="Min 6 caracteres de largo" />
-        <button className='login-button' type="submit">Registrame</button>
-      </div>
-      <Link to="/registro" className="link-menu">No tienes cuenta? Registrate aquí</Link>
-    </div>
-    </div>
-  </>
-  )
+      <Navbar />
+      <form className="main" onSubmit={logIn}>
+        <div className="container">
+          <div className="form-avatar"></div>
+          <div className="form-title">Bienvenido de vuelta!</div>
+          <p>Ingresa tus datos</p>
+          <div className="inputs">
+            <label htmlFor="email" className="label">
+              Correo
+            </label>
+            <input
+              className="input"
+              type="email"
+              id="email"
+              placeholder="juanito123@test.com"
+            />
+            <label htmlFor="password" className="label">
+              Contraseña
+            </label>
+            <input
+              className="input"
+              type="password"
+              id="password"
+              placeholder="Min 6 caracteres de largo"
+            />
+            <button className="login-button" type="submit">
+              Iniciar Sesión
+            </button>
+          </div>
+          <Link to="/registro" className="link-menu">
+            No tienes cuenta? Registrate aquí
+          </Link>
+        </div>
+      </form>
+    </>
+  );
 }

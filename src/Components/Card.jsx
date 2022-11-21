@@ -17,7 +17,7 @@ export default function Card() {
     servicios[servicioIndex].favorito ? swal("Listo!", "Haz añadido este servicio a tus favoritos!", "success") : swal("Se fueee!", "Haz quitado este servicio a tus favoritos", "info");
   }
 
-  //Render de las Cards a mostrar en view Home
+  //Render de las Cards a mostrar en view TiendaPrivada
   return (
     <div className="card-container">
     {servicios.map((servicio) =>

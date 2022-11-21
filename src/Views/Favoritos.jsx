@@ -3,6 +3,8 @@ import TiendaContext from '../Context/TiendaProvider';
 import PrivateNavbar from '../Components/PrivateNavbar';
 import { useNavigate } from "react-router-dom";
 import { formatNumber } from "../formatNumber";
+import '../Styles/favoritos.css';
+import swal from 'sweetalert';
 
 
 export default function Favoritos() {
@@ -13,6 +15,7 @@ export default function Favoritos() {
     const servicioIndex = servicios.findIndex((e) => e.id === id);
     servicios[servicioIndex].favorito = !servicios[servicioIndex].favorito;
     setServicios([...servicios]);
+    swal("Se fueee!", "Haz quitado este servicio a tus favoritos", "info");
   }
 
 
@@ -36,10 +39,6 @@ export default function Favoritos() {
                       <span className="hashtag"># </span>
                       {servicio.name}
                     </h4>
-                    <i
-                      class="fa-solid fa-square-xmark"
-                      onClick={() => unSetFavoritos(servicio.id)}
-                    ></i>
                   </div>
                   <p className="card-text">
                     <b>Servicios:</b>
@@ -50,9 +49,15 @@ export default function Favoritos() {
                     ))}
                   </ul>
                 </div>
-                <h2 className="card-precio">
+                <div className='precio-favoritos'>
+                <span onClick={() => unSetFavoritos(servicio.id)} className='quitar-favorito'><p>Quitar de Favoritos <i
+                      class="fa-solid fa-heart-circle-xmark"
+                      
+                    ></i></p></span>
+                  <h2 className="card-precio">
                   $ {formatNumber(servicio.price)}
-                </h2>
+                </h2></div>
+                
                 <div className="buttons">
                   <button
                     className="btn-verMas"

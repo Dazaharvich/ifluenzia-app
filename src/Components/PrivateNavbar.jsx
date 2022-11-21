@@ -15,8 +15,9 @@ export default function PrivateNavbar() {
       </Link>
       </div>
     <div className="links">
-      <Link to="/registro" className="link-menu">Mi Perfil</Link>
-      <Link to="/login" className="link-menu">Página de servicios</Link>
+      <Link to="/perfil" className="link-menu">Mi Perfil</Link>
+      <Link to="/tienda" className="link-menu">Página de servicios</Link>
+      <Link to="/favoritos" className="link-menu">Mis Favoritos</Link>
       <Link to="/carrito" className="link-carrito">
         <h4 className="total">
           <span className="logo-carrito">🛒</span>Total: $

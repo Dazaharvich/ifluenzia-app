@@ -1,0 +1,10 @@
+.quitar-favorito{
+    color: rgb(231, 62, 20);
+    border-radius: 70%;
+    cursor: pointer;
+}
+
+.precio-favoritos{
+    display: flex;
+    justify-content: space-between;
+}
