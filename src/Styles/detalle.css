@@ -1,3 +1,9 @@
+.cards_detalle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
 .card-detalle-descripcion{
     text-align: center;
     caret-color: #de48b5;
@@ -20,4 +26,7 @@
         padding: 1rem;
         background-color: #ffffff;
         color: #636363;
+}
+.card-tittle_detalle{
+    margin: 1.5rem 1.5rem;
 }

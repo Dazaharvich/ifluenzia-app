@@ -25,16 +25,16 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/registro" element={<Registro />} />
         <Route path="/login" element={<InicioSesion />} />
-        {/* <Route path="/favoritos" element={ <PrivateRoute auth={{ isAuth }}> <Favoritos /> </PrivateRoute> } /> */}
-        <Route path="/favoritos" element={ <Favoritos /> } />
-        {/* <Route path="/tienda" element={<PrivateRoute auth={{ isAuth }}> <TiendaPrivada /> </PrivateRoute> } /> */}
-        <Route path="/tienda" element={ <TiendaPrivada /> } />
-        {/* <Route path="/perfil" element={<PrivateRoute auth={{ isAuth }}> <Perfil /> </PrivateRoute>} /> */}
-        <Route path="/perfil" element={ <Perfil /> } />
-        {/* <Route path="/tienda/servicio/:id" element={<PrivateRoute auth={{ isAuth }}> <Detalle /> </PrivateRoute>} /> */}
-        <Route path="/tienda/servicio/:id" element={ <Detalle /> } />
-        {/* <Route path="/publicar" element={ <PrivateRoute auth={{ isAuth }}> <NuevaPublicacion /> </PrivateRoute> } /> */}
-        <Route path="/publicar" element={ <NuevaPublicacion /> } />
+        <Route path="/favoritos" element={ <PrivateRoute auth={{ isAuth }}> <Favoritos /> </PrivateRoute> } />
+        {/* <Route path="/favoritos" element={ <Favoritos /> } /> */}
+        <Route path="/tienda" element={<PrivateRoute auth={{ isAuth }}> <TiendaPrivada /> </PrivateRoute> } />
+        {/* <Route path="/tienda" element={ <TiendaPrivada /> } /> */}
+        <Route path="/perfil" element={<PrivateRoute auth={{ isAuth }}> <Perfil /> </PrivateRoute>} />
+        {/* <Route path="/perfil" element={ <Perfil /> } /> */}
+        <Route path="/tienda/servicio/:id" element={<PrivateRoute auth={{ isAuth }}> <Detalle /> </PrivateRoute>} />
+        {/* <Route path="/tienda/servicio/:id" element={ <Detalle /> } /> */}
+        <Route path="/publicar" element={ <PrivateRoute auth={{ isAuth }}> <NuevaPublicacion /> </PrivateRoute> } />
+        {/* <Route path="/publicar" element={ <NuevaPublicacion /> } /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

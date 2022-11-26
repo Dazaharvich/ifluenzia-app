@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PrivateNavbar from '../Components/PrivateNavbar';
-//import TiendaContext from '../Context/TiendaProvider';
+import TiendaContext from '../Context/TiendaProvider';
 import '../Styles/perfil.css';
 
 
 export default function Perfil() {
+  const {loggedUser} = useContext(TiendaContext);
+
+
   return (
     <>
       <PrivateNavbar />
@@ -17,25 +20,19 @@ export default function Perfil() {
           <input
             className="input"
             type="text"
-            placeholder="Juan"
-          />
-          <label className="label">Apellido: </label>
-          <input
-            className="input"
-            type="text"
-            placeholder="Gonzalez"
+            placeholder={loggedUser.nombre}
           />
           <label className="label">Nombre Usuario: </label>
           <input
             className="input"
             type="text"
-            placeholder="J_Gonzalez"
+            placeholder={loggedUser.nombre}
           />
           <label className="label">Correo: </label>
           <input
             className="input"
             type="email"
-            placeholder="JGonzalez@gmail.com"
+            placeholder={loggedUser.correo}
           />
           <label className="label">Teléfono: </label>
           <input

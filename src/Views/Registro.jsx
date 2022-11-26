@@ -31,10 +31,10 @@ export default function Registro() {
           swal("El correo ya existe", "Intenta iniciar sesión", "warning");
         }
       }else{
-        swal("Correo o contraseña inválidos", "warning");
+        swal("Las contraseñas no concuerdan","", "warning");
       }
     }else{
-      swal("Debe ingresar todos sus datos", "warning");
+      swal("Debe ingresar todos sus datos","", "warning");
     }
 
   };
@@ -87,7 +87,7 @@ export default function Registro() {
             />
 
             <label htmlFor="rep-reg-password" className="label">
-              Contraseña
+              Repita Contraseña
             </label>
             <input
               className="input"

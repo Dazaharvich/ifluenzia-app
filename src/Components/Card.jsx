@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 
 export default function Card() {
-  const { servicios, setServicios, addToCart } = useContext(TiendaContext);
+  const { servicios, setServicios, addToCart, busqueda } = useContext(TiendaContext);
   const navigate = useNavigate();
 
   //Funcion para añadir y quitar de favoritos
@@ -20,7 +20,18 @@ export default function Card() {
   //Render de las Cards a mostrar en view TiendaPrivada
   return (
     <div className="card-container">
-    {servicios.map((servicio) =>
+    {servicios.filter((servicio) => {
+                if (busqueda === "") {
+                  return servicio;
+                } else if ((
+                    servicio.name
+                    .toLocaleLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "")
+                    .includes(busqueda.toLocaleLowerCase()))
+                ) {
+                  return servicio;
+                }}).map((servicio) =>
     <div key={servicio.id} className="cards">
     <div className="card">
         <img className="card-img-top" src={servicio.img} alt={servicio.name} />

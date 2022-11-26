@@ -27,6 +27,7 @@ export default function Detalle() {
   return (
     <>
       <Navbar />
+      <div className="main-container_detalle">
       <div className="card-container">
         <div className="cards">
           <div className="card-detalle">
@@ -36,7 +37,7 @@ export default function Detalle() {
               alt={servicioDetalle.name}
             />
             <div className="card-body">
-              <h4 className="card-tittle">Pizza {servicioDetalle.name}</h4>
+              <h4 className="card-tittle_detalle">{servicioDetalle.name}</h4>
               <p className='card-detalle-descripcion'>{servicioDetalle.desc}</p>
               <p className="card-text">
                 <b>Ingredientes:</b>
@@ -60,6 +61,7 @@ export default function Detalle() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

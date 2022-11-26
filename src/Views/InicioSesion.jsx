@@ -8,7 +8,7 @@ import swal from 'sweetalert';
 
 export default function InicioSesion() {
 
-  const {users, setIsAuth, setLoggedUser} = useContext(TiendaContext);
+  const {users, setUsers, setIsAuth, setLoggedUser} = useContext(TiendaContext);
   const navigate = useNavigate();
 
 //Capturar datos de inicio sesion
@@ -17,16 +17,21 @@ const logIn = () =>{
   let correo = document.getElementById("email").value;
   let password = document.getElementById("password").value; 
 
-  if (correo === "" && password === ""){
+  if (!correo && !password){
     swal("Complete ambos parametros por favor", "warning");
   }else{
-    const newLogIn = users.find(e => e.email === correo);
+    let newLogIn = users.find((e) => e.correo === correo);
+    let newLogInIndex = users.findIndex((e) => e.correo === correo);
     if (newLogIn !== undefined){
-      if (newLogIn.password === password){
+      if (newLogIn.contraseña == password){
         setIsAuth(true);
+        users[newLogInIndex].login = true;
         setLoggedUser(newLogIn);
         console.log(newLogIn);
-        navigate("/tienda");
+        setUsers(users);
+        navigate('/tienda');
+      } else {
+        swal("Correo o contraseña invalidos", "warning");
       }
     } else {
       swal("Correo o contraseña invalidos", "warning");

@@ -16,6 +16,7 @@ export default function PrivateNavbar() {
       </div>
     <div className="links">
       <Link to="/perfil" className="link-menu">Mi Perfil</Link>
+      <Link to="/publicar" className="link-menu">Añadir Publicación</Link>
       <Link to="/tienda" className="link-menu">Página de servicios</Link>
       <Link to="/favoritos" className="link-menu">Mis Favoritos</Link>
       <Link to="/carrito" className="link-carrito">
